@@ -2,7 +2,7 @@
 Kill a process by utilizing a vulnerable kernel driver. 
 
 IM USING hacksysextremevulnerabledriver [HEVD] for this demo!
- 
+ ![Screenshot](devenv_oQZfG13Qbo.png)
 This program that loads a driver and then monitors a process, which is hardcoded. Can be changed at line 93. It opens a handle to the device and sends an IOCTL command to it. The program then checks all running processes to see if the process is running. If it is found, the program saves its PID and sends the PID to the driver through the same IOCTL command. This causes the driver to terminate the process with the given PID. The program can be compiled and run on a Windows machine with a vulnerable driver installed.
 
 Note: The program requires the driver to be unsigned and the system to have test signing enabled to load the driver. Disabling driver signature verification should only be done in a secure, isolated environment for testing purposes.
